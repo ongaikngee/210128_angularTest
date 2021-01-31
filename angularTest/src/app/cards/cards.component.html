@@ -1,0 +1,32 @@
+<div class="content">
+  <h1>{{ title }}</h1>
+
+  <div class="form">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <h2>Create a Card!</h2><br>
+      <label> Title: </label><br />
+      <input type="text" formControlName="title" placeholder="required" />
+
+      <br /><br />
+      <label> Content: </label><br />
+      <textarea
+        type="text"
+        formControlName="content"
+        placeholder="required"
+        cols="80"
+        rows="4"
+      ></textarea>
+      <br />
+
+      <br />
+      <button class="button" id="apply_button">Add Card</button>
+    </form>
+  </div>
+  <div class="cardContainer">
+    <div class="card" *ngFor="let post of posts; let i = index">
+      <p class="cardTitle">{{ post.title }}</p>
+      <p class="cardContent">{{ post.content }}</p>
+      <button class="button" (click)="deleteCard(i)">Delete</button>
+    </div>
+  </div>
+</div>

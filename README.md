@@ -23,6 +23,8 @@
 
 You can append to the existing README.md file the steps to run the application
 
+go the folder of the application, then type in the command $ ng serve
+
 ## API testing commands
 
 Append your test endpoint details
